@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>Hybrid clasroom</title>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="hybrid-classroom-widget">
+    <div class="hlm-text">
+      <h1>Hybrid classroom</h1>
+      <div class="hlm-highlights">
+        <div class="hlm-highlight selected" id="hlm-highlight-1">
+          <h2>Connect to room audio and video</h2>
+          <p>Connect your laptop to the room equipment and start your Zoom session.</p>
+        </div>
+        <div class="hlm-highlight" id="hlm-highlight-2">
+          <h2>Use tablet for writing and drawing</h2>
+          <p>If you need to write notes for students, use a Wacom tablet. Remote students will not be able to
+            adequately see writing on a blackboard or whiteboard.</p>
+        </div>
+        <div class="hlm-highlight" id="hlm-highlight-3">
+          <h2>Remote students visiable via large display</h2>
+          <p>Your remote students will be viewable on the room projector to the side of your presentation.</p>
+        </div>
+        <div class="hlm-highlight" id="hlm-highlight-4">
+          <h2>In-person students joining Zoom meeting</h2>
+          <p>Physically present students should join the Zoom meeting, but should mute their microphones.</p>
+        </div>
+        <div class="hlm-highlight" id="hlm-highlight-5">
+          <h2>Using installed cameras</h2>
+          <p>The rear mounted camera will give remote students a view of the classroom, but is insufficient for
+            viewing any wall writing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hlm-visuals">
+      <svg class="hlm-visualmap" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"
+        preserveAspectRatio="xMidYMax slice" aria-labelledby="graphic-title" aria-describedby="graphic-description">
+        <defs>
+          <style>
+            .links {
+              fill: url(#radial-gradient-link);
+              stroke-miterlimit: 10;
+              stroke-width: 5px;
+            }
+
+            .links:hover {
+              fill: url(#radial-gradient-hover);
+            }
+
+            .links:active {
+              fill: url(#radial-gradient-active);
+            }
+          </style>
+
+          <radialGradient id="radial-gradient-link" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0.69928" stop-color="#569dff" stop-opacity="0" />
+            <stop offset="1" stop-color="#569dff" stop-opacity="0.5" />
+          </radialGradient>
+          <radialGradient id="radial-gradient-hover" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0.69928" stop-color="#569dff" stop-opacity="0" />
+            <stop offset="1" stop-color="#569dff" stop-opacity="0.8" />
+          </radialGradient>
+          <radialGradient id="radial-gradient-active" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0.69928" stop-color="#569dff" stop-opacity="0.1" />
+            <stop offset="1" stop-color="#569dff" stop-opacity="1.0" />
+          </radialGradient>
+
+        </defs>
+        <title id="graphic-title">Hybrid classroom illustration</title>
+        <desc id="graphic-description">Illustration of highlights of classroom where some students are in-person and
+          others are remote.</desc>
+
+        <image width="1920" height="1080" xlink:href="images/HybridClassroom-0001.png" />
+
+        <a xlink:href="hlm-highlight-1">
+          <circle class="links" cx="960" cy="593" r="72" /></a>
+        <a xlink:href="hlm-highlight-2">
+          <circle class="links" cx="474" cy="510" r="118" /></a>
+        <a xlink:href="hlm-highlight-2">
+          <circle class="links" cx="1186" cy="660" r="75" /></a>
+        <a xlink:href="hlm-highlight-3">
+          <circle class="links" cx="1128" cy="392" r="95" /></a>
+        <a xlink:href="hlm-highlight-4">
+          <circle class="links" cx="848" cy="764" r="95" /></a>
+        <a xlink:href="hlm-highlight-5">
+          <circle class="links" cx="1331" cy="274" r="100" /></a>
+        <a xlink:href="hlm-highlight-6">
+          <circle class="links" cx="677" cy="610" r="80" /></a>
+        <a xlink:href="hlm-highlight-7">
+          <ellipse class="links" cx="1351" cy="996.5" rx="73.5" ry="256"
+            transform="translate(316.0375 2318.26619) rotate(-88.35108)" /></a>
+
+      </svg>
+
+
+    </div>
+    <div class="hlm-controls">
+      <button class="hlm-prev" type="button">Previous</button>
+      <button class="hlm-next" type="button">Next</button>
+    </div>
+  </div>
+
+  <script type="application/javascript" src="highlightmap.js"></script>
+</body>
+
+</html>

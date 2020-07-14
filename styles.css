@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#hybrid-classroom-widget * {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 4.5vmin;
+}
+
+#hybrid-classroom-widget h1,
+#hybrid-classroom-widget h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  line-height: 1.125em;
+}
+
+#hybrid-classroom-widget h1 {
+  font-size: 5vmin;
+  font-weight: 700;
+  margin: 0;
+}
+
+#hybrid-classroom-widget h2 {
+  font-size: 6vmin;
+  margin-top: 0.5em;
+}
+
+#hybrid-classroom-widget {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff6e5;
+}
+
+.hlm-text {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+.hlm-highlights {
+  position: relative;
+}
+
+.hlm-highlight {
+  position: absolute;
+  left: -200vh;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.selected {
+  left: 0;
+  width: unset;
+  height: unset;
+  opacity: 100;
+}
+
+.hlm-visuals {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  height: 70%;
+}
+
+.hlm-visualmap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 70%;
+  max-height: 80%;
+  max-width: 100%;
+}
+
+.hlm-controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5em;
+}
+
+.hlm-controls button {
+  margin: 1em;
+  border: 1px solid #ddd;
+  background: none;
+  border-radius: 0.75em;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+
+.hlm-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.hlm-controls button:active {
+  font-weight: 700;
+  border: 1px solid #333;
+}
+
+button.hlm-next::after {
+  content: " \003e";
+}
+
+button.hlm-prev::before {
+  content: "\003c   ";
+}
+
+@media (min-aspect-ratio: 4/3) {
+  .hlm-text {
+    z-index: 1;
+    width: 35%;
+  }
+
+  .hlm-visuals {
+    width: 65%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 400px) {
+  #hybrid-classroom-widget * {
+    font-size: 18px;
+  }
+
+  .hlm-visualmap {
+    min-height: 80%;
+    max-height: 90%;
+  }
+
+  #hybrid-classroom-widget h1 {
+    font-size: 4vmin;
+  }
+
+  #hybrid-classroom-widget h2 {
+    font-size: 5vmin;
+  }
+}
