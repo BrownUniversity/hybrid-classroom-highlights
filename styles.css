@@ -60,7 +60,7 @@ body {
   transition: opacity 0.75s;
 }
 
-.selected {
+.hlm-highlights .selected {
   left: 0;
   width: unset;
   height: unset;

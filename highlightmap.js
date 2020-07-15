@@ -1,11 +1,11 @@
 (function (containerId) {
   const prefix = "hlm";
-  const linksSelector = `.${prefix}-visualmap a`;
+  const circleLinkSelector = `.${prefix}-visualmap a`;
   const highlightSelector = `.${prefix}-highlights .${prefix}-highlight`;
   const buttonSelector = `.${prefix}-controls .${prefix}-`;
 
   const container = document.getElementById(containerId);
-  const linksArray = [...container.querySelectorAll(linksSelector)];
+  const circleLinksArray = [...container.querySelectorAll(circleLinkSelector)];
   const highlightsArray = [...container.querySelectorAll(highlightSelector)];
   const selector = `.${prefix}-controls ${prefix}-next`;
 
@@ -20,32 +20,43 @@
     incrementHighlight(-1);
   });
 
-  linksArray.forEach((link) => {
+  circleLinksArray.forEach((link) => {
     const highlight = document.querySelector(link.href.baseVal);
 
     link.addEventListener("click", (e) => {
       event.preventDefault();
 
-      console.log(link.id);
-
-      const highlightId = link.href.baseVal;
-      const highlight = container.querySelector(`#${highlightId}`);
-      if (highlight === null) return;
-      highlightsArray.forEach((highlight) => {
-        if (highlightId !== highlight.id)
-          highlight.classList.remove("selected");
-      });
-
-      highlight.classList.add("selected");
+      changeHighlight(link.href.baseVal);
     });
   });
 
-  function incrementHighlight(incrment) {
+  function changeHighlight(highlightId) {
+    const highlight = container.querySelector(`#${highlightId}`);
+    if (highlight === null) return;
+
+    //Update which highlight is selected
+    highlightsArray.forEach((highlight) => {
+      if (highlightId !== highlight.id) highlight.classList.remove("selected");
+    });
+    highlight.classList.add("selected");
+
+    //TODO: Update which circles are selected
+    circleLinksArray.forEach((circleLink) => {
+      const circle = circleLink.children[0];
+      if (circleLink.href.baseVal === highlightId) {
+        circle.classList.add("selected");
+      } else {
+        circle.classList.remove("selected");
+      }
+    });
+  }
+
+  function incrementHighlight(increment) {
     const index = highlightsArray.findIndex((highlight) => {
       return highlight.classList.contains("selected");
     });
 
-    let nextIndex = index + incrment;
+    let nextIndex = index + increment;
 
     if (nextIndex >= highlightsArray.length) {
       nextIndex = 0;
@@ -53,8 +64,6 @@
       nextIndex = highlightsArray.length - 1;
     }
 
-    console.log(`Current: ${index}  Next:${nextIndex}`);
-    highlightsArray[index].classList.remove("selected");
-    highlightsArray[nextIndex].classList.add("selected");
+    changeHighlight(highlightsArray[nextIndex].id);
   }
 })("hybrid-classroom-widget");
