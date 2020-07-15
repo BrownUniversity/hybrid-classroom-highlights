@@ -44,11 +44,16 @@
     const index = highlightsArray.findIndex((highlight) => {
       return highlight.classList.contains("selected");
     });
-    const nextIndex =
-      index !== 0
-        ? (index + incrment) % highlightsArray.length
-        : highlightsArray.length - 1;
 
+    let nextIndex = index + incrment;
+
+    if (nextIndex >= highlightsArray.length) {
+      nextIndex = 0;
+    } else if (nextIndex < 0) {
+      nextIndex = highlightsArray.length - 1;
+    }
+
+    console.log(`Current: ${index}  Next:${nextIndex}`);
     highlightsArray[index].classList.remove("selected");
     highlightsArray[nextIndex].classList.add("selected");
   }
