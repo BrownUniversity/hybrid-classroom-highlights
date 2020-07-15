@@ -4,6 +4,8 @@
   const highlightSelector = `.${prefix}-highlights .${prefix}-highlight`;
   const buttonSelector = `.${prefix}-controls .${prefix}-`;
 
+  const defaultHighlightSelector = "#hlm-highlight-0";
+
   const container = document.getElementById(containerId);
   const circleLinksArray = [...container.querySelectorAll(circleLinkSelector)];
   const highlightsArray = [...container.querySelectorAll(highlightSelector)];
@@ -31,24 +33,38 @@
   });
 
   function changeHighlight(highlightId) {
-    const highlight = container.querySelector(`#${highlightId}`);
+    let highlight = container.querySelector(`#${highlightId}`);
     if (highlight === null) return;
 
-    //Update which highlight is selected
-    highlightsArray.forEach((highlight) => {
-      if (highlightId !== highlight.id) highlight.classList.remove("selected");
-    });
-    highlight.classList.add("selected");
+    if (highlight.classList.contains("selected")) {
+      highlight.classList.remove("selected");
+      container
+        .querySelector(defaultHighlightSelector)
+        .classList.add("selected");
 
-    //TODO: Update which circles are selected
-    circleLinksArray.forEach((circleLink) => {
-      const circle = circleLink.children[0];
-      if (circleLink.href.baseVal === highlightId) {
-        circle.classList.add("selected");
-      } else {
+      circleLinksArray.forEach((circleLink) => {
+        const circle = circleLink.children[0];
         circle.classList.remove("selected");
-      }
-    });
+      });
+    } else {
+      //Update which highlight is selected
+      highlightsArray.forEach((highlight) => {
+        if (highlightId !== highlight.id)
+          highlight.classList.remove("selected");
+      });
+
+      highlight.classList.add("selected");
+
+      //TODO: Update which circles are selected
+      circleLinksArray.forEach((circleLink) => {
+        const circle = circleLink.children[0];
+        if (circleLink.href.baseVal === highlightId) {
+          circle.classList.add("selected");
+        } else {
+          circle.classList.remove("selected");
+        }
+      });
+    }
   }
 
   function incrementHighlight(increment) {
