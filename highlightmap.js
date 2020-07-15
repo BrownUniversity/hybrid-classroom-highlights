@@ -26,8 +26,7 @@
     link.addEventListener("click", (e) => {
       event.preventDefault();
 
-      const child = link.children[0];
-      console.log(child.cx.baseVal.value + " x " + child.cy.baseVal.value);
+      console.log(link.id);
 
       const highlightId = link.href.baseVal;
       const highlight = container.querySelector(`#${highlightId}`);

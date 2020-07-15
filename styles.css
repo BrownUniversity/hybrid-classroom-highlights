@@ -57,7 +57,7 @@ body {
   height: 1px;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.75s;
 }
 
 .selected {

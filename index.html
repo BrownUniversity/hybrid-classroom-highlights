@@ -44,32 +44,31 @@
         <defs>
           <style>
             .links {
-              fill: url(#radial-gradient-link);
+              fill: rgba(86, 157, 255, 1);
+              stroke: rgba(86, 157, 255, 1);
               stroke-miterlimit: 10;
-              stroke-width: 5px;
+              stroke-width: 2px;
+              transition: all 0.5s;
             }
 
             .links:hover {
-              fill: url(#radial-gradient-hover);
+              fill: rgba(86, 157, 255, 0.0);
+              stroke: rgba(86, 157, 255, 1);
+              transform: scale(4);
             }
 
             .links:active {
-              fill: url(#radial-gradient-active);
+              fill: rgba(86, 157, 255, 1);
+              stroke: rgba(86, 157, 255, 1);
+              transform: scale(3);
             }
           </style>
 
-          <radialGradient id="radial-gradient-link" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0.69928" stop-color="#569dff" stop-opacity="0" />
-            <stop offset="1" stop-color="#569dff" stop-opacity="0.5" />
-          </radialGradient>
           <radialGradient id="radial-gradient-hover" cx="0.5" cy="0.5" r="0.5">
             <stop offset="0.69928" stop-color="#569dff" stop-opacity="0" />
             <stop offset="1" stop-color="#569dff" stop-opacity="0.8" />
           </radialGradient>
-          <radialGradient id="radial-gradient-active" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0.69928" stop-color="#569dff" stop-opacity="0.1" />
-            <stop offset="1" stop-color="#569dff" stop-opacity="1.0" />
-          </radialGradient>
+
 
         </defs>
         <title id="graphic-title">Hybrid classroom illustration</title>
@@ -78,23 +77,47 @@
 
         <image width="1920" height="1080" xlink:href="images/HybridClassroom-0001.png" />
 
-        <a xlink:href="hlm-highlight-1">
-          <circle class="links" cx="960" cy="593" r="72" /></a>
-        <a xlink:href="hlm-highlight-2">
-          <circle class="links" cx="474" cy="510" r="118" /></a>
-        <a xlink:href="hlm-highlight-2">
-          <circle class="links" cx="1186" cy="660" r="75" /></a>
-        <a xlink:href="hlm-highlight-3">
-          <circle class="links" cx="1128" cy="392" r="95" /></a>
-        <a xlink:href="hlm-highlight-4">
-          <circle class="links" cx="848" cy="764" r="95" /></a>
-        <a xlink:href="hlm-highlight-5">
-          <circle class="links" cx="1331" cy="274" r="100" /></a>
-        <a xlink:href="hlm-highlight-6">
-          <circle class="links" cx="677" cy="610" r="80" /></a>
-        <a xlink:href="hlm-highlight-7">
-          <ellipse class="links" cx="1351" cy="996.5" rx="73.5" ry="256"
-            transform="translate(316.0375 2318.26619) rotate(-88.35108)" /></a>
+
+        <g transform="translate(960,593)">
+          <a id="circle-1" xlink:href="hlm-highlight-1">
+            <circle class="links" cx="0" cy="0" r="20" /></a>
+        </g>
+        <g transform="translate(474,510)">
+          <a id="circle-2" xlink:href="hlm-highlight-2">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+        <g transform="translate(1186,660)">
+          <a id="circle-3" xlink:href="hlm-highlight-2">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+        <g transform="translate(1128,392)">
+          <a id="circle-4" xlink:href="hlm-highlight-3">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+        <g transform="translate(848,764)">
+          <a id="circle-5" xlink:href="hlm-highlight-4">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+        <g transform="translate(1331,274)">
+          <a id="circle-6" xlink:href="hlm-highlight-5">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+        <g transform="translate(640,620)">
+          <a id="circle-7" xlink:href="hlm-highlight-6">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
+
+        <g transform="translate(1180,950)">
+          <a id="circle-8" xlink:href="hlm-highlight-7">
+            <circle class="links" cx="0" cy="0" r="20" />
+          </a>
+        </g>
 
       </svg>
 
