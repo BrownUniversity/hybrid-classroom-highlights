@@ -21,13 +21,13 @@ body {
 }
 
 #hybrid-classroom-widget h1 {
-  font-size: 5vmin;
+  font-size: calc(0.5rem + 5vmin);
   font-weight: 700;
   margin: 0;
 }
 
 #hybrid-classroom-widget h2 {
-  font-size: 6vmin;
+  font-size: calc(0.5rem + 6vmin);
   margin-top: 0.5em;
 }
 
@@ -142,10 +142,10 @@ button.hlm-prev::before {
   }
 
   #hybrid-classroom-widget h1 {
-    font-size: 4vmin;
+    font-size: calc(0.25rem + 4vmin);
   }
 
   #hybrid-classroom-widget h2 {
-    font-size: 5vmin;
+    font-size: calc(0.25rem + 5vmin);
   }
 }
