@@ -43,8 +43,9 @@
         .classList.add("selected");
 
       circleLinksArray.forEach((circleLink) => {
-        const circle = circleLink.children[0];
-        circle.classList.remove("selected");
+        [...circleLink.children].forEach((child) => {
+          child.classList.remove("selected");
+        });
       });
     } else {
       //Update which highlight is selected
@@ -57,12 +58,13 @@
 
       //TODO: Update which circles are selected
       circleLinksArray.forEach((circleLink) => {
-        const circle = circleLink.children[0];
-        if (circleLink.href.baseVal === highlightId) {
-          circle.classList.add("selected");
-        } else {
-          circle.classList.remove("selected");
-        }
+        [...circleLink.children].forEach((child) => {
+          if (circleLink.href.baseVal === highlightId) {
+            child.classList.add("selected");
+          } else {
+            child.classList.remove("selected");
+          }
+        });
       });
     }
   }

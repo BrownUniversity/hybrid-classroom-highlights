@@ -60,6 +60,13 @@
         preserveAspectRatio="xMidYMax slice" aria-labelledby="graphic-title" aria-describedby="graphic-description">
         <defs>
           <style>
+            .cross {
+              fill: none;
+              stroke: rgb(255, 145, 1);
+              stroke-width: 1.5px;
+              transition: all 0.5s;
+            }
+
             .hlm-circle {
               fill: rgba(86, 157, 255, 1);
               stroke: rgba(86, 157, 255, 1);
@@ -75,7 +82,8 @@
               transform: scale(2);
             }
 
-            circle.selected {
+            circle.selected,
+            .cross.selected {
               fill: rgb(255, 145, 1, 0);
               stroke: rgb(255, 145, 1);
               transform: scale(5);
@@ -95,12 +103,18 @@
 
         <image width="1280" height="960" xlink:href="images/HybridClassroom-0001.png" />
 
+
+
         <g transform="translate(638,445)">
           <a id="circle-1" xlink:href="hlm-highlight-1">
             <circle class="hlm-circle" cx="0" cy="0" r="20" /></a>
         </g>
         <g transform="translate(355,390)">
           <a id="circle-2" xlink:href="hlm-highlight-2">
+            <g class="cross">
+              <line class="cross" x1="-14" y1="-14" x2="14" y2="14" />
+              <line class="cross" x1="-14" y1="14" x2="14" y2="-14" />
+            </g>
             <circle class="hlm-circle" cx="0" cy="0" r="20" />
           </a>
         </g>
