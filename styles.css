@@ -5,12 +5,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-size: 20px;
 }
 
 #hybrid-classroom-widget * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 4.5vmin;
 }
 
 #hybrid-classroom-widget h1,
@@ -31,6 +31,11 @@ body {
   margin-top: 0.5em;
 }
 
+#hybrid-classroom-widget p {
+  font-size: calc(0.5rem + 2vmin);
+  line-height: 1.75em;
+}
+
 #hybrid-classroom-widget {
   position: relative;
   width: 100%;
@@ -43,7 +48,6 @@ body {
   position: relative;
   width: 100%;
   padding: 1em;
-  line-height: 1.5em;
 }
 
 .hlm-highlights {
@@ -101,6 +105,7 @@ body {
   border-radius: 0.75em;
   padding: 0.5em 1em;
   text-transform: uppercase;
+  font-size: calc(0.25rem + 3vmin);
 }
 
 .hlm-controls button:hover {
@@ -132,13 +137,14 @@ button.hlm-prev::before {
 }
 
 @media screen and (min-width: 400px) and (min-height: 400px) {
-  #hybrid-classroom-widget * {
-    font-size: 18px;
-  }
-
   .hlm-visualmap {
     min-height: 80%;
     max-height: 90%;
+  }
+
+  #hybrid-classroom-widget p,
+  .hlm-controls button {
+    font-size: 20px;
   }
 
   #hybrid-classroom-widget h1 {
