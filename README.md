@@ -1,4 +1,4 @@
-# Hybrid Classroom Highlights
+# Remote-accessible classroom highlights
 
 Illustration of a hybrid classroom where some students are in-person and other are remote.
 
